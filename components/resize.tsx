@@ -162,7 +162,7 @@ const ResizableDiv: React.FC = () => {
                     title: "Something went wrong :(",
                 })
             })
-    }, [divRef])
+    }, [divRef, toast])
     const exportClipboard = useCallback(async () => {
         if (divRef.current === null) {
             return
@@ -187,7 +187,7 @@ const ResizableDiv: React.FC = () => {
 
         })
 
-    }, [divRef])
+    }, [divRef, toast])
     const exportSvg = useCallback(() => {
         if (divRef.current === null) {
             return
@@ -216,7 +216,7 @@ const ResizableDiv: React.FC = () => {
                     title: "Something went wrong :(",
                 })
             })
-    }, [divRef])
+    }, [divRef, toast])
     return (
         <div>
 
