@@ -159,7 +159,7 @@ const ResizableDiv: React.FC = () => {
                 console.log(err)
                 toast({
                     variant: "destructive",
-                    title: "Something went wrong :(",
+                    title: "Something went wrong :(, please reload.",
                 })
             })
     }, [divRef, toast])
@@ -178,14 +178,20 @@ const ResizableDiv: React.FC = () => {
             window.navigator.clipboard.write([
                 new ClipboardItem({ "image/png": blob }),
             ]);
+            toast({
+                title: "Successfully copied!",
+                duration: 3000,
+
+
+
+            })
+
+        } else {
+            toast({
+                variant: "destructive",
+                title: "Something went wrong :(, please reload.",
+            })
         }
-        toast({
-            title: "Successfully copied!",
-            duration: 3000,
-
-
-
-        })
 
     }, [divRef, toast])
     const exportSvg = useCallback(() => {
@@ -213,7 +219,7 @@ const ResizableDiv: React.FC = () => {
                 console.log(err)
                 toast({
                     variant: "destructive",
-                    title: "Something went wrong :(",
+                    title: "Something went wrong :(, please reload.",
                 })
             })
     }, [divRef, toast])
