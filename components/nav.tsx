@@ -7,7 +7,7 @@ import Image from "next/image"
 export function Nav() {
 
     return (
-        <div className="fixed flex justify-between top-0 w-screen p-4">
+        <div className="fixed hidden lg:flex justify-between  top-0 w-screen p-8">
             <div className="p-5 bg-green-600 absolute z-0 blur-xl"></div>
             <div className="p-20 rounded-full bg-blue-900 absolute left-16 -top-10 z-0 blur-3xl"></div>
             <div className="p-10  bg-purple-900 absolute top-16 z-0 blur-2xl"></div>

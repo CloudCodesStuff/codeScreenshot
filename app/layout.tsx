@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider"
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Next.js',
@@ -16,8 +17,8 @@ export default function RootLayout({
         attribute="class"
         defaultTheme="system"
         enableSystem
-        disableTransitionOnChange
-      >{children}</ThemeProvider></body>
+      >{children}<Analytics></Analytics>
+      </ThemeProvider></body>
 
     </html>
   )
